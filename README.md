@@ -7,7 +7,7 @@ This repository hosts the **analysis scripts, pipelines, and reproducibility ass
 > **Main preprint:**  
 > *Statistical Approach Leveraging Genealogies of Populations with a Founder Effect and Identical by Descent Segments to Identify Rare Variants in Complex Diseases.* medRxiv (Sep 18, 2025), DOI: [10.1101/2025.09.16.25335588](https://doi.org/10.1101/2025.09.16.25335588)  
 > **Package preprint:**  
-> *FounderRare: A Novel Statistical Package to Identify Rare Variants in Complex Diseases.* medRxiv (Sep 11, 2025),  [DOI](https://www.medrxiv.org/content/10.1101/2025.09.11.25335516v1)
+> *FounderRare: A Novel Statistical Package to Identify Rare Variants in Complex Diseases.* medRxiv (Sep 11, 2025),  [10.1101/2025.09.11.25335516](https://www.medrxiv.org/content/10.1101/2025.09.11.25335516v1)
 
 ---
 
@@ -19,12 +19,12 @@ This repository hosts the **analysis scripts, pipelines, and reproducibility ass
 - **Genealogy‑aware calibration.** Obtains the **genome‑wide maximal statistic’s null** via whole‑genome transmission simulations in the pedigree using **msprime**.
 
 See details in the medRxiv preprints:  
-- Main method and results: [10.1101/2025.09.16.25335588](https://doi.org/10.1101/2025.09.16.25335588) (PDF: [full text](https://www.medrxiv.org/content/10.1101/2025.09.16.25335588v1.full.pdf))  
-- Package overview: [FounderRare preprint](https://www.medrxiv.org/content/10.1101/2025.09.11.25335516v1)
+- Main method and results: [10.1101/2025.09.16.25335588](https://doi.org/10.1101/2025.09.16.25335588) 
+- Package overview: [10.1101/2025.09.11.25335516](https://www.medrxiv.org/content/10.1101/2025.09.11.25335516v1)
 
 ---
 
 - **FounderRare R package (separate repo)**  
   The production implementation of the **S_msg / S_all** statistics, windowing utilities, cluster building lives at:  
   **GitHub:** https://github.com/oubninte/FounderRare  
-  **Package paper:** *FounderRare: A Novel Statistical Package to Identify Rare Variants in Complex Diseases* (medRxiv). [DOI](https://www.medrxiv.org/content/10.1101/2025.09.11.25335516v1)
+  **Package paper:** *FounderRare: A Novel Statistical Package to Identify Rare Variants in Complex Diseases* (medRxiv). [10.1101/2025.09.11.25335516](https://www.medrxiv.org/content/10.1101/2025.09.11.25335516v1)
