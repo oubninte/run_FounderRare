@@ -1,0 +1,43 @@
+#! /bin/sh
+
+#SBATCH --account=def-bureau 
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem-per-cpu=4G
+#SBATCH --time=0-6:00
+
+#SBATCH --output=/home/oubninte/projects/rrg-girardsi/genealogy_sims/results/Samir/Sims_power/Phenotype_sims_100reps/ForAlexandre/Slurm.%A.out
+#SBATCH --mail-user=samir.oubninte.1@ulaval.ca
+#SBATCH --mail-type=FAIL
+
+
+#  Objective:
+# Submit a SLURM job that loads Python and extracts rare‑variant genotypes from simulated WGS data
+# for a given chromosome and replicate. The script prints run info, sets input paths, and calls
+# `RareVariant_Genotype_chr.py` to generate outputs for downstream analyses.
+
+
+#To run an example :
+  #for chrom in 21; do for rep in 1; do sbatch --export=ALL,chrom=${chrom},rep=${rep} Extract_variants.sh ; done; done
+
+# to run cmd  : sbatch run_WGS_to_Chip_chr.sh
+  #for chrom in {22..1}; do for rep in {1..100}; do sbatch --export=ALL,chrom=${chrom},rep=${rep} Extract_variants.sh ; done; done
+  
+echo "****************************        Starting...     ****************************"
+echo "**************************** chr= $chrom , rep =$rep  ****************************"
+
+module load python/3.10.2
+
+echo "Exe date"
+date +%D 
+date +%T
+
+#Get genotype of variant rare in CRG commun in SCZ
+echo "Get genotype of variant rare in CRG/commun in SCZ"
+
+
+path_wgs="/lustre03/project/6033529/genealogy_sims/results/Samir/Sims_data/"
+   
+python RareVariant_Genotype_chr.py $path_wgs $chrom $rep 
+      
+echo "**************************** ... END .. ****************************"
