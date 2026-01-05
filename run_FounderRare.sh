@@ -11,6 +11,16 @@
 #SBATCH --mail-type=FAIL
 
 
+  
+  
+# Example running founderRare approche :
+
+## Prepare phased chip genotype inputs, keep affected probands (IIDs), infer IBD (Identical By Descent) segments
+## on the chosen chromosome, remove segments crossing genome gaps, cluster IBD segments, filter long clusters (>10 Mb),
+## and compute the Smsg statistic for that chromosome.
+
+# To run code, example :
+  #for chrom in 22; do sbatch --export=ALL,chrom=${chrom} run_FounderRare.sh ; done
 
 # Print the current chromosome 
 echo "****************************  chr $chrom**************************** " 
